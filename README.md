@@ -5,7 +5,7 @@
 
 Serie storica dei dati della sorveglianza integrata COVID-19 in Italia. I dati sono disponibili nel folder [`data`](data) di questo repository.
 
-I dati vengono rilasciati quotidianamente dall'Istituto Superiore di Sanità in [questa pagina web](https://www.epicentro.iss.it/coronavirus/sars-cov-2-dashboard).
+Il dato giornaliero viene rilasciato quotidianamente dall'Istituto Superiore di Sanità in [questa pagina web](https://www.epicentro.iss.it/coronavirus/sars-cov-2-dashboard) in un file Excel che sembra sovrascrivere il precedente.
 
 ## Stato degli aggiornamenti
 
