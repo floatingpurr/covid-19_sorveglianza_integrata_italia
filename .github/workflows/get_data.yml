@@ -28,6 +28,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
+      # clean staging area
+      - name: clean staging area
+        run: rm data/staging/*
 
       # Install dependencies from requirements.txt
       - name: Install dependencies
@@ -45,7 +48,6 @@ jobs:
         run: |
           now=$(date +'%d-%m-%Y')
           echo "Checking data on: ${now}"
-          rm data/staging/*
           mkdir data/${now} || true
           cp data/staging/* data/${now}
           git config --global user.name 'GitHub Actions'
