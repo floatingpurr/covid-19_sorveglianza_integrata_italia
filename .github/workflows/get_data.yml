@@ -45,7 +45,7 @@ jobs:
         run: |
           now=$(date +'%d-%m-%Y')
           echo "Checking data on: ${now}"
-          mkdir data/${now}
+          mkdir data/${now} || true
           cp data/staging/* data/${now}
           git config --global user.name 'GitHub Actions'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
