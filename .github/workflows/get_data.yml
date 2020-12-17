@@ -43,16 +43,16 @@ jobs:
       # Commit & Push
       - name: Commit a new report (if necessary)
         run: |
-          now=$(date +'%d-%m-%Y')
-          echo "Checking data on: ${now}"
+          echo "Checking data on: `date`"
           if [ -n "$(git status --porcelain)" ]; then
             echo "New update available"
-            mkdir data/${now}
-            cp data/latest/* data/${now}
+            report_date=$(cat data/latest/date)
+            mkdir data/${report_date}
+            cp data/latest/* data/${report_date}
             git config --global user.name 'GitHub Actions'
             git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add .
-            git commit -am "Refresh data on: ${now}"
+            git commit -am "Add new report (${report_date})"
             git push
           else
             echo "no changes to commit"
