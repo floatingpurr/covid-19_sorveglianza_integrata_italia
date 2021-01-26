@@ -4,8 +4,10 @@ import csv
 data_path = 'data/latest'
 
 wb = load_workbook(f'{data_path}/data.xlsx', read_only=True)
-# get report date
-report_date = wb['casi_regioni']['A2'].value.replace('/','-')
+
+# get the report date
+date_list = wb['casi_regioni']['A2'].value.split('/')
+report_date = f'{date_list[2]}-{date_list[1]}-{date_list[0]}'
 
 # Write date to file
 with open(f'{data_path}/date', 'w') as f:
