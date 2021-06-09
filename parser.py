@@ -17,5 +17,5 @@ with open(f'{data_path}/date', 'w') as f:
 for sheet in wb.worksheets:
     with open(f'{data_path}/{sheet.title}.csv', 'w', newline="") as f:
         c = csv.writer(f)
-        for r in sheet.rows:
+        for r in sheet.iter_rows(min_row=1, min_col=1, max_row=1000, max_col=10):
             c.writerow([cell.value for cell in r])
