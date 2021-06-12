@@ -15,6 +15,8 @@ with open(f'{data_path}/date', 'w') as f:
 
 # Write data to file
 for sheet in wb.worksheets:
+    # fix bad file format in read_only mode
+    sheet.reset_dimensions()
     with open(f'{data_path}/{sheet.title}.csv', 'w', newline="") as f:
         c = csv.writer(f)
         for r in sheet.rows:
