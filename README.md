@@ -1,7 +1,7 @@
 # COVID-19 Sorveglianza Integrata Italia
 
 [![get_data_from_iss](https://github.com/floatingpurr/covid-19_sorveglianza_integrata_italia/actions/workflows/get_data.yml/badge.svg)](https://github.com/floatingpurr/covid-19_sorveglianza_integrata_italia/actions/workflows/get_data.yml)
-[![GitHub commit](https://img.shields.io/github/last-commit/floatingpurr/covid-19_sorveglianza_integrata_italia)](https://github.com/floatingpurr/covid-19_sorveglianza_integrata_italia/commits/main)
+[![GitHub commit](https://img.shields.io/github/last-commit/floatingpurr/covid-19_sorveglianza_integrata_italia)](https://github.com/floatingpurr/covid-19_sorveglianza_integrata_italia/commits)
 
 Serie storica dei dati della sorveglianza integrata COVID-19 in Italia. I dati sono disponibili nel folder [`data`](data) di questo repository.
 
